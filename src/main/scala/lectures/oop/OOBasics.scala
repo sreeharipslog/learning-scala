@@ -51,7 +51,7 @@ class Avenger(val name: String, power: String = "default", var weight: Int) {
  * methods: authorAge, isWrittenBy [to validate author], copy(new year of release)
  */
 class Writer(firstName: String, lastName: String, val year: Int) {
-  def fullName: String = s"${firstName} ${lastName}"
+  def fullName: String = s"$firstName $lastName"
 }
 
 class Novel(name: String, yearOfRelease: Int, author: Writer) {
@@ -85,5 +85,5 @@ class Counter(val count: Int = 0) {
     else inc.inc(n - 1)
   }
 
-  def print(): Unit = println(s"count = ${count}") // Parameterless Method with side-effect
+  def print(): Unit = println(s"count = $count") // Parameterless Method with side-effect
 }

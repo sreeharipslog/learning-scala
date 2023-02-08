@@ -119,11 +119,43 @@ object TupleAndMap extends App {
   // Jim, Bob and Mary
   val people = addPerson(addPerson(addPerson(empty, "Jim"), "Bob"), "Mary")
   val jimBob = friend(people, "Jim", "Bob")
-  val jimMary = friend(jimBob, "Jim", "Mary")
-  println(jimMary)
+  val testNet = friend(jimBob, "Jim", "Mary")
+  println(testNet)
 
+  // Utilities
   def nFriends(network: Map[String, Set[String]], person: String): Int = {
     if (!network.contains(person)) 0
     else network(person).size
   }
+
+  def mostFriends(networkApp: Map[String, Set[String]]): String = {
+    networkApp.maxBy(_._2.size)._1 // maxBy is backed by a comparator
+  }
+
+  def nPeopleWithNoFriends(networkApp: Map[String, Set[String]]): Int = {
+    // networkApp.view.filterKeys(networkApp(_).isEmpty).size
+    // networkApp.filter(_._2.isEmpty).size
+    networkApp.count(_._2.isEmpty)
+  }
+
+  def isConnected(networkApp: Map[String, Set[String]], a: String, b: String): Boolean = {
+    @tailrec
+    def bfs(target: String, consideredPeople: Set[String], discoveredPeople: Set[String]): Boolean = {
+      if (discoveredPeople.isEmpty) false
+      else {
+        val person = discoveredPeople.head
+        if (person == target) true
+        else if (consideredPeople.contains(person)) bfs(target, consideredPeople, discoveredPeople.tail)
+        else bfs(target, consideredPeople + person, discoveredPeople.tail ++ networkApp(person))
+      }
+    }
+
+    bfs(b, Set(), networkApp(a) + a)
+  }
+
+  println(nFriends(testNet, "Jim"))
+  println(mostFriends(testNet))
+  println(nPeopleWithNoFriends(testNet))
+  println(isConnected(testNet, "Jim", "Mary"))
+  println(isConnected(network, "Hari", "Emma"))
 }

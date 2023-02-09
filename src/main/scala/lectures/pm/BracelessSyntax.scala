@@ -1,0 +1,5 @@
+package pm
+
+object BracelessSyntax {
+
+}

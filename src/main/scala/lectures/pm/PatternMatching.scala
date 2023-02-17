@@ -1,4 +1,4 @@
-package pm
+package lectures.pm
 
 import scala.util.Random
 

@@ -1,4 +1,4 @@
-package oops
+package lectures.oop
 
 import scala.annotation.tailrec
 

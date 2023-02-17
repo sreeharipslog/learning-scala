@@ -1,4 +1,4 @@
-package oops
+package lectures.oop
 
 // Singleton Object
 object ScalaObject {

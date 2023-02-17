@@ -1,4 +1,4 @@
-package exercise
+package lectures.exercise
 
 class MyList {
 

@@ -1,4 +1,4 @@
-package fp
+package lectures.fp
 
 object FilterMapAndFlatmap extends App {
 

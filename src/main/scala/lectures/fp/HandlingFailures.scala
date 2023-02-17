@@ -1,4 +1,4 @@
-package fp
+package lectures.fp
 
 import scala.util.{Failure, Random, Success, Try}
 

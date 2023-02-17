@@ -1,5 +1,5 @@
-package fp
+package lectures.fp
 
-object HoFAndCurry extends App{
+object HoFAndCurry extends App {
 
 }

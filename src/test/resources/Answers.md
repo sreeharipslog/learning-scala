@@ -1,4 +1,4 @@
-# Scala Interview Questions
+# Scala Interview Question Answers
 ---
 ## Basics
 1. `val` keyword is used to create an immutable variable whereas `var` create a mutable variable i.e. it can be reassigned.

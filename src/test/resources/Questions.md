@@ -1,5 +1,4 @@
 # Scala Interview Questions
----
 ## Basics
 1. Difference between `val` and `var` in Scala?
 2. Difference between instructions and expressions?

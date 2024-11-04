@@ -1,5 +1,4 @@
 # Scala Interview Question Answers
----
 ## Basics
 1. `val` keyword is used to create an immutable variable whereas `var` create a mutable variable i.e. it can be reassigned.
 2. Instructions are typically statements that perform actions or change the state of the program whereas Expressions evaluates to a value. In Scala everything is an expression.
